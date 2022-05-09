@@ -4,37 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Hunter App</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
+    <title>Restaurant Hunter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <a href="#main" class="skip-to-konten">Skip To content</a>
     <header class="header">
         <div class="header-inner">
-            <h1 class="header-title">Restaurant Hunter App</h1>
+            <img class="logo" src="../public/images/heros/restaurant-hunter-logo.png" alt="RestoHunter logo">
+            <h1 class="header-title">Restaurant Hunter</h1>
         </div>
 
-        <nav>
-            <ul>
-                <li class="nav-item"><a href="#">Home</a></li>
+        <nav id="drawer" class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="http://localhost:8081/">Home</a></li>
                 <li class="nav-item"><a href="#">Favorite</a></li>
                 <li class="nav-item"><a href="https://github.com/kadekframa" target="_blank">About Us</a></li>
             </ul>
         </nav>
+        <a id="menu" class="header-menu">☰</a>
     </header>
 
     <div class="hero">
         <div class="hero-inner">
-            <h1 class="hero-title">Temukan restaurant favorit Anda!</h1>
-            <p class="hero-tagline">Dukung produk dalam negeri. Jadilah pemburu kuliner di negeri sendiri !</p>
+            <h1 tabindex="0" class="hero-title">Temukan restaurant favorit Anda!</h1>
+            <p tabindex="0" class="hero-tagline">Dukung produk dalam negeri. Jadilah pemburu kuliner di negeri sendiri !</p>
         </div>
     </div>
 
-    <main>
+    <main id="main">
         <section>
             <div class="explore">
-                <h1>Explore Restaurant</h1>
-                <hr>
-                <div id="content-resto">
+                <h1 class="explore-label">Explore Restaurant</h1>
+                <div id="posts-restaurant" class="posts-restaurant">
                     <!-- content -->
                 </div>
             </div>
@@ -42,7 +44,7 @@
     </main>
 
     <footer>
-        <p>Copyright 2022 - Restaurant Hunter Apps</p>
+        <p tabindex="0">Copyright 2022 - Restaurant Hunter Apps by Kadek Frama | Support by Dicoding Indonesia</p>
     </footer>
 </body>
 </html>

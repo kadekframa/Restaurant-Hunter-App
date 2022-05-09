@@ -1,0 +1,274 @@
+.posts {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+@media screen and (max-width: 399px){
+    .nav {
+        z-index: 10;
+        background-color: rgb(243, 243, 243);
+        width: 180px;
+        position: absolute;
+        font-size: 12px;
+
+        /* This transform moves the drawer off canvas. */
+        -webkit-transform: translate(260px, 0);
+        transform: translate(250px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+
+        margin-top: 50px;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        right: 0.6px;
+    }
+
+    .nav .nav-item {
+        display: list-item;
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+    }
+
+    header .header-title {
+        font-size: 1.6em !important;
+    }
+
+    .hero {
+        width: 100% !important;
+    }
+
+    .hero .hero-title {
+        margin-bottom: 34px !important;
+        font-size: 30px !important;
+    }
+
+    .hero .hero-tagline {
+        margin-top: -24px !important;
+        font-size: 14px !important;
+    }
+
+    .explore .post-item {
+        margin-left: 34px !important;
+        width: 320px !important;
+    }
+
+    .header .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .nav {
+        z-index: 10;
+        background-color: rgb(243, 243, 243);
+        width: 180px;
+        position: absolute;
+        font-size: 12px;
+
+        /* This transform moves the drawer off canvas. */
+        -webkit-transform: translate(260px, 0);
+        transform: translate(250px, 0);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+
+        margin-top: 50px;
+    }
+
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        right: 0.6px;
+    }
+
+    .nav .nav-item {
+        display: list-item;
+        border: 1px solid #e0e0e0;
+        width: 100%;
+        text-align: left;
+        padding: 20px;
+    }
+
+    header .header-title {
+        font-size: 1.6em !important;
+    }
+
+    .hero {
+        width: 100% !important;
+    }
+
+    .hero .hero-title {
+        margin-bottom: 34px !important;
+        font-size: 32px !important;
+    }
+
+    .hero .hero-tagline {
+        margin-top: -24px;
+        padding-left: 60px;
+        padding-right: 60px;
+        font-size: 16px;
+    }
+
+    .explore .post-item {
+        margin-left: 48px;
+        width: 324px;
+    }
+
+    
+    .header .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .header .logo {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 501px) {
+    .header .header-menu {
+        display: none;
+    }
+
+    .nav .nav-item {
+        padding: 4px;
+    }
+
+    header .header-title {
+        font-size: 1.64em !important;
+    }
+
+    .hero .hero-title {
+        margin-bottom: 34px !important;
+        font-size: 36px !important;
+    }
+
+    .hero .hero-tagline {
+        margin-top: -24px;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: 18px;
+    }
+
+    .nav {
+        right: 10px;
+    }
+
+    .nav a {
+        color: rgb(214, 214, 214);
+    }
+
+    .nav a:hover {
+        color: rgb(119, 119, 119);
+    }
+
+    
+    .explore-label {
+        font-size: 26px;
+    }
+}
+
+
+
+@media screen and (min-width: 665px) {
+    .nav {
+        right: 30px;
+    }
+
+    header .header-title {
+        font-size: 1.68em;
+    }
+
+    .hero .hero-title {
+        margin-bottom: 90px !important;
+        font-size: 42px !important;
+    }
+
+    .hero .hero-tagline {
+        margin-top: -84px;
+        padding-left: 34px;
+        padding-right: 34px;
+        font-size: 21px;
+    }
+
+    .explore-label {
+        font-size: 28px;
+        margin-top: 34px;
+    }
+
+    .posts-restaurant {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 12px;
+        margin-top: 20px !important;
+    }
+
+    .explore .post-item {
+        margin: 12px 0 10px 32px;
+        width: 332px;
+    }
+}
+
+@media screen and (min-width: 1174px) {
+    .posts-restaurant {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);   
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main {
+        max-width: 1200px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .posts-restaurant {
+        margin: 34px 0 10px 0 !important;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    header .header-title {
+        font-size: 1.8em;
+    }
+
+    .hero .hero-title {
+        margin-bottom: 120px !important;
+        font-size: 54px !important;
+    }
+
+    .hero .hero-tagline {
+        margin-top: -110px;
+        padding-left: 34px;
+        padding-right: 34px;
+        font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .posts-restaurant {
+        margin: 34px 0 10px 0 !important;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .hero .hero-title {
+        margin-bottom: 120px !important;
+        font-size: 64px !important;
+    }
+
+    .hero .hero-tagline {
+        margin-top: -110px;
+        padding-left: 34px;
+        padding-right: 34px;
+        font-size: 34px;
+    }
+}
