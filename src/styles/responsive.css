@@ -71,14 +71,14 @@
         width: 180px;
         position: absolute;
         font-size: 12px;
+        display: hidden;
 
         /* This transform moves the drawer off canvas. */
-        -webkit-transform: translate(260px, 0);
-        transform: translate(250px, 0);
+        -webkit-transform: translate(-400px, 0);
+        transform: translate(-400px, 0);
 
         /* Optionally, we animate the drawer. */
         transition: transform 0.3s ease;
-
         margin-top: 50px;
     }
 
@@ -103,9 +103,6 @@
         font-size: 13.5px;
         text-align: center;
         padding: 10px 36px 10px 10px;
-    }
-
-    .nav .nav-item a:focus {
     }
 
     header .header-title {

@@ -233,8 +233,9 @@ body{
     color: rgb(124, 124, 124);
  }
 
- .post-item-rate a {
-     color: rgb(231, 201, 29);
+ .post-item-rate .post-item-rate-number {
+    padding: 4px;
+   color: rgb(229, 196, 8);
  }
 
  .post-item-title {

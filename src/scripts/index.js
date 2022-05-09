@@ -15,7 +15,7 @@ data.restaurants.forEach((resto) => {
             </div>
             <div class="post-item-content">
             <p class="post-item-rate">
-                Rating <a tabindex="-1" href="#" class="post-item__date__author">${resto.rating}</a>
+                Rating: <b tabindex="-1" class="post-item-rate-number">${resto.rating}</b>
             </p>
             <h1 class="post-item-title"><a href="#">${resto.name}</a></h1>
             <p class="post-item-description">${resto.description}</p>
