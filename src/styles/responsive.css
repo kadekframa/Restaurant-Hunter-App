@@ -12,8 +12,8 @@
         font-size: 12px;
 
         /* This transform moves the drawer off canvas. */
-        -webkit-transform: translate(260px, 0);
-        transform: translate(250px, 0);
+        -webkit-transform: translate(264px, 0);
+        transform: translate(264px, 0);
 
         /* Optionally, we animate the drawer. */
         transition: transform 0.3s ease;
@@ -36,7 +36,8 @@
     }
 
     header .header-title {
-        font-size: 1.6em !important;
+        top: 1px;
+        font-size: 1.4em !important;
     }
 
     .hero {
@@ -89,13 +90,26 @@
 
     .nav .nav-item {
         display: list-item;
+        display: flex;
+        align-items: center;
         border: 1px solid #e0e0e0;
         width: 100%;
         text-align: left;
-        padding: 20px;
+        padding: 30px;
+    }
+
+    
+    .nav .nav-item a {
+        font-size: 13.5px;
+        text-align: center;
+        padding: 10px 36px 10px 10px;
+    }
+
+    .nav .nav-item a:focus {
     }
 
     header .header-title {
+        top: 1px !important;
         font-size: 1.6em !important;
     }
 
@@ -132,6 +146,13 @@
     }
 }
 
+@media screen and (min-width: 740px) {
+    .header .header-title {
+        top: -18px !important;
+        font-size: 1.4em !important;
+    }
+}
+
 @media screen and (min-width: 501px) {
     .header .header-menu {
         display: none;
@@ -141,8 +162,9 @@
         padding: 4px;
     }
 
-    header .header-title {
-        font-size: 1.64em !important;
+    .header .header-title {
+        top: 0.1px;
+        font-size: 1.4em !important;
     }
 
     .hero .hero-title {

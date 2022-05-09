@@ -9,7 +9,7 @@ data.restaurants.forEach((resto) => {
     html += `
         <article class="post-item">
             <img tabindex="0" class="post-item-thumbnail" src="${resto.pictureId}"
-                alt="Gambar suasana restoran yang berada di ${resto.city}"/>
+                alt="Gambar suasana restoran yang berada di ${resto.city}" title="Gambar Suasana restoran yang berada di ${resto.city}"/>
             <div class="city">
             <span>${resto.city}</span>
             </div>
@@ -32,6 +32,7 @@ const menu = document.querySelector('#menu');
 const drawer = document.querySelector('#drawer');
 const main = document.querySelector('main');
 const hero = document.querySelector('.hero');
+const anchor = document.querySelector('.nav-item-anchor');
 
 
 menu.addEventListener('click', function(event){
@@ -45,4 +46,8 @@ hero.addEventListener("click", function(){
 
 main.addEventListener('click', function(){
     drawer.classList.remove('open');
+});
+
+anchor.addEventListener('focus', () => {
+    drawer.classList.toggle('open');
 });
