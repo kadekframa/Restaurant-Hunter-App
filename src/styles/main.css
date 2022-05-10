@@ -216,7 +216,7 @@ body{
 
 .post-item .city {
     z-index: 12;
-    font-size: 13.6px;
+    font-size: 15px;
     color: white;
     position:  relative;
     text-align: center;
@@ -239,11 +239,16 @@ body{
  }
 
  .post-item-title {
-    font-size: 18px;
+    font-size: 21px;
     font-weight: 500;
     margin-top: 16px;
     transition: 0.3s opacity;
  }
+ 
+ .posts-restaurant .post-item-title a {
+   padding: 12px 0 12px 0;
+   cursor: pointer;
+}
 
  .post-item-title:hover {
      opacity: 0.5;

@@ -135,6 +135,10 @@
     .header .logo {
         display: none;
     }
+
+    .posts-restaurant .post-item-title a {
+        padding: 12px 0 12px 0;
+    }
 }
 
 @media screen and (max-width: 740px) {

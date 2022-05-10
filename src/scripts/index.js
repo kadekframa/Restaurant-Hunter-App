@@ -9,7 +9,7 @@ data.restaurants.forEach((resto) => {
     html += `
         <article class="post-item">
             <img tabindex="0" class="post-item-thumbnail" src="${resto.pictureId}"
-                alt="Gambar suasana restoran yang berada di ${resto.city}" title="Gambar Suasana restoran yang berada di ${resto.city}"/>
+                alt="Gambar suasana restoran yang berada di ${resto.name}" title="Gambar Suasana restoran ${resto.name}"/>
             <div class="city">
             <span>${resto.city}</span>
             </div>
