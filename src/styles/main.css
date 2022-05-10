@@ -207,6 +207,10 @@ body{
     width: 100%;
     transition: .6s;
     margin-bottom: 24px;
+    width: 100%;
+    height: 234px;
+    object-fit: cover;
+    object-position: center;
  }
 
 .post-item-thumbnail:hover {
