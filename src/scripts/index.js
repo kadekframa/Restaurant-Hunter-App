@@ -32,13 +32,17 @@ const menu = document.querySelector('#menu');
 const drawer = document.querySelector('#drawer');
 const main = document.querySelector('main');
 const hero = document.querySelector('.hero');
-const anchor = document.querySelector('.nav-item-anchor');
 const anchorAll = document.querySelectorAll('.nav-item-anchor');
 const anchorLast = document.querySelector('.after-this');
 
 
 menu.addEventListener('click', function(event){
-    drawer.classList.toggle('open');
+    if(drawer.classList.contains('open') || drawer.classList.contains('open-focus')){
+        drawer.classList.remove('open');
+        drawer.classList.remove('open-focus');
+    }else{
+        drawer.classList.add('open');
+    }
     event.stopPropagation();
 });
 
@@ -48,20 +52,18 @@ hero.addEventListener("click", function(){
 
 main.addEventListener('click', function(){
     drawer.classList.remove('open');
-});
-
-
-anchor.addEventListener('focus', () => {
-    drawer.classList.toggle('open-focus');
-});
+}); 
 
 anchorAll.forEach((elem) => {
+    elem.addEventListener('focus', () => {
+        drawer.classList.add('open-focus');
+    });
+
     elem.addEventListener('click', () => {
         drawer.classList.remove('open');
         drawer.classList.remove('open-focus');
     });
 });
-
 
 anchorLast.addEventListener('blur', () => {
     drawer.classList.remove('open');
