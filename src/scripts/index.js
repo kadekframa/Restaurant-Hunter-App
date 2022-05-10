@@ -33,6 +33,7 @@ const drawer = document.querySelector('#drawer');
 const main = document.querySelector('main');
 const hero = document.querySelector('.hero');
 const anchor = document.querySelector('.nav-item-anchor');
+const anchorLast = document.querySelector('.after-this');
 
 
 menu.addEventListener('click', function(event){
@@ -49,5 +50,9 @@ main.addEventListener('click', function(){
 });
 
 anchor.addEventListener('focus', () => {
+    drawer.classList.toggle('open');
+});
+
+anchorLast.addEventListener('blur', () => {
     drawer.classList.toggle('open');
 });
