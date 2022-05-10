@@ -50,9 +50,10 @@ main.addEventListener('click', function(){
 });
 
 anchor.addEventListener('focus', () => {
-    drawer.classList.toggle('open');
+    drawer.classList.toggle('open-focus');
 });
 
 anchorLast.addEventListener('blur', () => {
-    drawer.classList.toggle('open');
+    drawer.classList.remove('open');
+    drawer.classList.remove('open-focus');
 });

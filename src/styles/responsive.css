@@ -3,6 +3,8 @@
     grid-row-gap: 16px;
 }
 
+
+
 @media screen and (max-width: 399px){
     .nav {
         z-index: 10;
@@ -74,8 +76,8 @@
         display: hidden;
 
         /* This transform moves the drawer off canvas. */
-        -webkit-transform: translate(-400px, 0);
-        transform: translate(-400px, 0);
+        -webkit-transform: translate(-500px, 0);
+        transform: translate(-500px, 0);
 
         /* Optionally, we animate the drawer. */
         transition: transform 0.3s ease;
@@ -83,6 +85,12 @@
     }
 
     .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        right: 0.6px;
+    }
+
+    .open-focus {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
         right: 0.6px;
@@ -138,6 +146,59 @@
 
     .posts-restaurant .post-item-title a {
         padding: 12px 0 12px 0;
+    }
+}
+
+@media screen and (max-width: 350px){
+    header .header-title {
+        top: 1px;
+        font-size: 1.4em !important;
+    }
+
+    .hero .hero-title {
+        font-size: 30px !important;
+    }
+    
+    .hero .hero-tagline {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .explore .post-item {
+        margin-left: 30px !important;
+        width: 274px !important;
+    }
+
+    .post-item .city {
+        margin: 0 84px 0 84px;
+    }
+}
+
+@media screen and (max-width: 310px){
+    header .header-title {
+        top: 1px;
+        font-size: 1.3em !important;
+    }
+
+    .hero .hero-title {
+        font-size: 25px !important;
+    }
+    
+    .hero .hero-tagline {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .explore .explore-label {
+        font-size: 24px;
+    }
+    .explore .post-item {
+        margin-left: 24px !important;
+        width: 264px !important;
+    }
+
+    .post-item .city {
+        margin: 0 84px 0 84px;
     }
 }
 
