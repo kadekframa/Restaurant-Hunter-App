@@ -17,6 +17,7 @@
         "indent": "off",
         "linebreak-style": "off",
         "no-underscore-dangle": "off",
-        "no-restricted-globals": "off"
+        "no-restricted-globals": "off",
+        "object-curly-newline": "off"
     }
 }

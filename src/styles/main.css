@@ -233,6 +233,7 @@ body, html {
  .restaurant-item .restaurant-item__content h3 a {
    color: #db0000;
    text-decoration: none;
+   padding: 11px 11px 11px 0;
  }
   
  .restaurant-item .restaurant-item__content p {
@@ -311,6 +312,30 @@ body, html {
      font-size: 11px;
   }
 
+
+ /*
+  * Favorite
+  *
+  */
+  .favorite-empty .favorite-not-found {
+     width: 100%;
+     font-size: 20px;
+     text-align: center;
+     margin-bottom: 20px;
+  }
+  
+  .favorite-empty .back-to-home {
+     position: relative;
+     font-size:20px;
+     padding: 10px;
+     top: 24px;
+     color: white;
+     background-color: #2c3e50;
+     border-radius: 10px;
+     cursor: pointer;
+     text-decoration: none;
+
+  }
 
 
 

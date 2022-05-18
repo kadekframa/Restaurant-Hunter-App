@@ -9,6 +9,9 @@ const Like = {
         <div id="restaurants" class="restaurants">
  
         </div>
+        <div id="favorite-empty" class="favorite-empty">
+ 
+        </div>
       </div>
     `;
   },
@@ -16,6 +19,15 @@ const Like = {
   async afterRender() {
     const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
+    const favoriteEmpty = document.querySelector('#favorite-empty');
+    if (restaurants.length === 0) {
+        favoriteEmpty.innerHTML = `
+            <div class="favorite-not-found">
+                <p>--- Restoran favorit anda tidak ditemukan, silahkan di like dulu yaa! ---</p>
+                <a class="back-to-home" href="#/home">Kembali ke menu Home</a>
+            </div>
+        `;
+    }
     restaurants.forEach((restaurant, index) => {
         restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant, index);
     });

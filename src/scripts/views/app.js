@@ -3,10 +3,11 @@ import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
-    constructor({ button, drawer, content }) {
+    constructor({ button, drawer, content, hero }) {
         this._button = button;
         this._drawer = drawer;
         this._content = content;
+        this._hero = hero;
 
         this._initialAppShell();
     }
@@ -17,6 +18,7 @@ class App {
             button: this._button,
             drawer: this._drawer,
             content: this._content,
+            hero: this._hero,
         });
 
         // kita bisa menginisiasikan komponen lain bila ada.
@@ -31,7 +33,7 @@ class App {
         const skipToContentElement = document.querySelector('.skip-to-konten');
         skipToContentElement.addEventListener('click', (event) => {
         event.preventDefault();
-        document.querySelector('#main-content').focus();
+        document.querySelector('#main').focus();
     });
     }
 };
