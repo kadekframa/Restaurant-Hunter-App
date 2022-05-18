@@ -3,11 +3,12 @@ import UrlParser from '../routes/url-parser';
 import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
-    constructor({ button, drawer, content, hero }) {
+    constructor({ button, drawer, content, hero, skipToContent }) {
         this._button = button;
         this._drawer = drawer;
         this._content = content;
         this._hero = hero;
+        this._skipToContent = skipToContent;
 
         this._initialAppShell();
     }
@@ -19,6 +20,7 @@ class App {
             drawer: this._drawer,
             content: this._content,
             hero: this._hero,
+            skipToContent: this._skipToContent,
         });
 
         // kita bisa menginisiasikan komponen lain bila ada.

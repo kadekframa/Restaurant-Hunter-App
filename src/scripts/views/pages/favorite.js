@@ -23,7 +23,7 @@ const Like = {
     if (restaurants.length === 0) {
         favoriteEmpty.innerHTML = `
             <div class="favorite-not-found">
-                <p>--- Restoran favorit anda tidak ditemukan, silahkan di like dulu yaa! ---</p>
+                <p tabindex="0">--- Restoran favorit anda tidak ditemukan, silahkan di like dulu yaa! ---</p>
                 <a class="back-to-home" href="#/home">Kembali ke menu Home</a>
             </div>
         `;

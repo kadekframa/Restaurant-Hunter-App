@@ -206,6 +206,11 @@ body, html {
  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
    width: 100%;
  }
+
+ .restaurant-item .restaurant-item__header .restaurant-item__header__poster:hover {
+   transform: scale(1, 1);
+   overflow: auto;
+ }
   
  .restaurant-item .restaurant-item__header .restaurant-item__header__rating {
    position: absolute;
@@ -266,7 +271,7 @@ body, html {
    width: 100%;
    max-width: 400px;
  }
-  
+
  .restaurant .restaurant__info h4 {
    margin: 8px 0;
  }
@@ -338,136 +343,6 @@ body, html {
   }
 
 
-
-
-
-
-
-
-
-
-
-/*
- *explore
- *
- */
- .explore{
-    width: 100%;
-    margin: 30px auto;
-    text-align: center;
- }
- .explore-label {
-    font-size: 32px;
-    font-weight: lighter;
- }
-
- .explore-label::after {
-    content: '';
-    margin-top: 16px;
-    display: block;
-    border-bottom: 1px solid #eeeeee;
- }
-
-/*
- *post 
- *
- */
- .posts-restaurant {
-    margin: 32px auto auto;
-    text-align: left;
- }
-
-/*
- *post item 
- *
- */
- .post-item {
-    margin: 20px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 300px;
-    border-radius: 12px;
-    overflow: hidden;
- }
-
- .post-item-content {
-    padding: 16px 32px 32px 32px;
- }
-
- .post-item-thumbnail {
-    width: 100%;
-    transition: .6s;
-    margin-bottom: 24px;
-    width: 100%;
-    height: 234px;
-    object-fit: cover;
-    object-position: center;
- }
-
-.post-item-thumbnail:hover {
-    transform: scale(1.2, 1.2);
-    overflow: auto;
-}
-
-.post-item .city {
-    z-index: 12;
-    font-size: 15px;
-    color: white;
-    position:  relative;
-    text-align: center;
-    margin-top: 30px;
-    margin: 0 120px 0 120px;
-    padding: 3px;
-    border-radius: 8px;
-    background-color: #364d63;
-}
-
- .post-item-rate {
-    font-size: 14px;
-    text-transform: uppercase;
-    color: rgb(124, 124, 124);
- }
-
- .post-item-rate .post-item-rate-number {
-    padding: 4px;
-   color: rgb(229, 196, 8);
- }
-
- .post-item-title {
-    font-size: 21px;
-    font-weight: 500;
-    margin-top: 16px;
-    transition: 0.3s opacity;
- }
- 
- .posts-restaurant .post-item-title a {
-   padding: 12px 0 12px 0;
-   cursor: pointer;
-}
-
- .post-item-title:hover {
-     opacity: 0.5;
- }
-
- .post-item-title a {
-    text-decoration: none;
-    color: inherit;
- }
-
- .post-item-description {
-    margin-top: 16px;
-    font-size: 14px;
-    line-height: 1.4em;
- }
-
-
-
-
-
-
-
-
-
-
 /*
     Footer
   */
@@ -475,6 +350,7 @@ body, html {
   footer {
     padding: 16px;
     margin-top: 24px;
+    background-color: white;
   }
    
   footer p {
