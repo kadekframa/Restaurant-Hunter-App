@@ -134,18 +134,8 @@
         font-size: 16px;
     }
 
-    .explore .post-item {
-        margin-left: 48px;
-        width: 324px;
-    }
-
-    
-    .header .logo {
-        display: none;
-    }
-
-    .posts-restaurant .post-item-title a {
-        padding: 12px 0 12px 0;
+    .restaurant .restaurant__description p {
+        margin-top: 10px;
     }
 }
 
@@ -202,18 +192,7 @@
     }
 }
 
-@media screen and (max-width: 740px) {
-    .header .logo {
-        display: none !important;
-    }
-}
 
-@media screen and (min-width: 740px) {
-    .header .header-title {
-        top: -18px !important;
-        font-size: 1.4em !important;
-    }
-}
 
 @media screen and (min-width: 501px) {
     .header .header-menu {
@@ -252,10 +231,9 @@
     .nav a:hover {
         color: rgb(119, 119, 119);
     }
-
     
-    .explore-label {
-        font-size: 26px;
+    .restaurant .restaurant__description p {
+        margin-top: 10px;
     }
 }
 
@@ -282,44 +260,63 @@
         font-size: 21px;
     }
 
-    .explore-label {
-        font-size: 28px;
-        margin-top: 34px;
+    .restaurants {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .posts-restaurant {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 12px;
-        margin-top: 20px !important;
+    .restaurant {
+        grid-template-columns: auto 1fr;
     }
 
-    .explore .post-item {
-        margin: 12px 0 10px 32px;
-        width: 332px;
+    .restaurant .restaurant__name {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .restaurant .restaurant__description {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .restaurant .restaurant__description p {
+        margin-top: 10px;
+    }
+
+    .restaurant .restaurant__reviews {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .restaurant .restaurant__info h4, .restaurant__info p {
+        margin-left: 4px;
+    }
+
+    .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
+        width: 100%;
+        height: 16.4em;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    header .header-title {
+        font-size: 2em !important;
     }
 }
 
-@media screen and (min-width: 1174px) {
-    .posts-restaurant {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);   
+@media screen and (min-width: 850px) {
+    .restaurants {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .main {
-        max-width: 1200px;
+    .restaurants {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media screen and (min-width: 1500px) {
-    .posts-restaurant {
-        margin: 34px 0 10px 0 !important;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-    }
-
+@media screen and (min-width: 1600px) {
     header .header-title {
         font-size: 1.8em;
     }
@@ -334,6 +331,10 @@
         padding-left: 34px;
         padding-right: 34px;
         font-size: 28px;
+    }
+
+    .restaurants {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 

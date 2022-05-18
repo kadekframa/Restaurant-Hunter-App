@@ -4,27 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <menu name="description" content="Restaurant Hunter is An app that provides katalog restaurants name also contain the review and location of restaurant. This website can help who wants to searching restaurant in Indonesia"></menu>
+    <meta name="theme-color" content="#213b6b"/>
+    <meta name="description" content="Restaurant Hunter is An app that provides katalog restaurants name also contain the review and location of restaurant. This website can help who wants to searching restaurant in Indonesia">
     <title>Restaurant Hunter</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Quicksand:wght@400;700&family=Varela+Round&display=swap" rel="stylesheet" type="text/css">
+    <link rel="icon" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+    <script src="https://use.fontawesome.com/b070c8f1df.js"></script>
 </head>
 <body>
     <a href="#main" class="skip-to-konten">Skip To content</a>
     <header class="header">
-        <div class="header-inner">
-            <img class="logo" src="https://www.kindpng.com/picc/m/57-575266_restaurants-clipart-greeter-logo-for-restaurant-hd-hd.png" alt="RestoHunter logo" title="Restaurant Hunter Logo">
-            <h1 class="header-title">Restaurant Hunter</h1>
-        </div>
-        
-        <button id="menu" class="header-menu" aria-label="menu drawer">☰</button>
-
-        <nav id="drawer" class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-item-anchor" href="/">Home</a></li>
-                <li class="nav-item"><a class="nav-item-anchor" href="#">Favorite</a></li>
-                <li class="nav-item"><a class="nav-item-anchor after-this" href="https://github.com/kadekframa" target="_blank" rel="noopener">About Us</a></li>
-            </ul>
-        </nav>
+        <app-bar></app-bar>
     </header>
 
     <div class="hero">
@@ -34,19 +26,10 @@
         </div>
     </div>
 
-    <main id="main">
-        <section>
-            <div class="explore">
-                <h1 class="explore-label">Explore Restaurant</h1>
-                <div id="posts-restaurant" class="posts-restaurant">
-                    <!-- content -->
-                </div>
-            </div>
-        </section>
-    </main>
+    <main id="main"></main>
 
     <footer>
-        <p tabindex="0">Copyright 2022 - Restaurant Hunter Apps by Kadek Frama | Support by Dicoding Indonesia</p>
+        <footer-bar></footer-bar>
     </footer>
 </body>
 </html>
