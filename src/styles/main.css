@@ -135,12 +135,19 @@ body, html {
  .hero{
     display: flex;
     align-items: center;
-    background-image: url("../public/images/heros/hero-image_4.jpg");
+    background-image: url("../public/images/hero-image_4.jpg");
     min-height: 400px;
     width: 100%;
     text-align: center;
     background-position: center;
  }
+
+  @media screen and (max-width: 399px) {
+    .hero {
+      background-image: url("../public/images//hero-image_4-small.jpg");
+    }
+  }
+
  .hero .hero-inner {
     margin: 0;
     width: 100%;
@@ -205,11 +212,6 @@ body, html {
   
  .restaurant-item .restaurant-item__header .restaurant-item__header__poster {
    width: 100%;
- }
-
- .restaurant-item .restaurant-item__header .restaurant-item__header__poster:hover {
-   transform: scale(1, 1);
-   overflow: auto;
  }
   
  .restaurant-item .restaurant-item__header .restaurant-item__header__rating {

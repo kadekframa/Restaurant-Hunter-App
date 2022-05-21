@@ -2,7 +2,7 @@ import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
     <h2 class="restaurant__name">${restaurant.name}</h2>
-    <img class="restaurant__picture" src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${restaurant.name}" />
+    <img class="restaurant__picture lazyload" data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}" alt="${restaurant.name}" />
     <div class="restaurant__info">
         <h3>Information</h3>
         <h4>City</h4>
@@ -34,11 +34,30 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
 `;
 
+const createSkeletonRestaurantTemplate = (count) => {
+    let template = '';
+  
+    for (let i = 0; i < count; i += 1) {
+      template += `
+        <div class="restaurant-item">
+          <div class="restaurant-item__header">
+              <img class="restaurant-item__header__poster lazyload" width="100%" height="350px" data-src="./images/placeholder.png" alt="skeleton">
+          </div>
+          <div class="restaurant-item__content">
+              <h3 class="skeleton">Lorem ipsum dolor sit.</a></h3>
+              <p class="skeleton">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci alias aspernatur, assumenda aut consectetur consequuntur debitis deleniti dicta dolorem dolorum eos exercitationem labore laboriosam magni nihil, nobis obcaecati optio perspiciatis placeat qui recusandae saepe sapiente sequi totam ullam ut.</p>
+          </div>
+        </div>
+    `;
+    }
+    return template;
+};
+
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item">
     <div class="restaurant-item__header">
-        <img class="restaurant-item__header__poster" alt="${restaurant.name}"
-            src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+        <img class="restaurant-item__header__poster lazyload" alt="${restaurant.name}"
+            data-src="${restaurant.pictureId ? CONFIG.BASE_IMAGE_URL + restaurant.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
         <div class="restaurant-item__header__rating">
             <p>⭐️<span class="restaurant-item__header__rating__score">${restaurant.rating}</span></p>
         </div>
@@ -50,21 +69,22 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
 `;
 
-const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+const createLikeRestaurantButtonTemplate = () => `
+  <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
-const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+const createUnlikeRestaurantButtonTemplate = () => `
+  <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
 export {
     createRestaurantDetailTemplate,
+    createSkeletonRestaurantTemplate,
     createRestaurantItemTemplate,
-    createLikeButtonTemplate,
-    createLikedButtonTemplate,
+    createLikeRestaurantButtonTemplate,
+    createUnlikeRestaurantButtonTemplate,
 };

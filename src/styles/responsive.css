@@ -37,6 +37,7 @@
 
     .hero {
         width: 100% !important;
+        min-height: 320px;
     }
 
     .hero .hero-title {
@@ -318,5 +319,9 @@
         padding-left: 34px;
         padding-right: 34px;
         font-size: 34px;
+    }
+
+    .main{
+        max-width: 1600px;
     }
 }

@@ -18,6 +18,7 @@
         "linebreak-style": "off",
         "no-underscore-dangle": "off",
         "no-restricted-globals": "off",
-        "object-curly-newline": "off"
+        "object-curly-newline": "off",
+        "no-undef": "off",
     }
 }
